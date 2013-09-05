@@ -1,0 +1,17 @@
+{
+  "name": "angular-youtube",
+  "main": "angular-youtube.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/eqot/angular-youtube",
+  "authors": [
+    "Ikuo Terado <eqobar@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
