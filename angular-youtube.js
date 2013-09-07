@@ -39,4 +39,35 @@ angular.module('AngularYouTube', [])
       }
     };
 
+  })
+
+  .directive('youtubeUploader', function () {
+    return {
+      restrict: 'E',
+      // template: '<div id="youtube-upload-widget"><div>';
+      template: '<iframe id="widget" type="text/html" width="640" height="390" src="https://www.youtube.com/upload_embed" frameborder="0"></iframe>',
+      link: function preLink(scope) {
+        var tag = document.createElement('script');
+        tag.src = 'http://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      }
+    };
   });
+
+/*
+function onYouTubeIframeAPIReady() {
+  console.log('ok');
+
+  var widget = new YT.UploadWidget('youtube-upload-widget', {
+    width: 500,
+    // events: {
+    //   'onUploadSuccess': onUploadSuccess,
+    //   'onProcessingComplete': onProcessingComplete
+    // }
+  });
+  // widget.setVideoTitle('title');
+  // widget.setVideoDescription('description');
+  // widget.setVideoPrivacy('unlisted');
+};
+*/
